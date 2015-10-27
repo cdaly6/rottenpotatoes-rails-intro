@@ -1,7 +1,7 @@
 -#  This file is app/views/movies/index.html.haml
 %h1 All Movies
 
-# start copyed code
+
 = form_tag movies_path, :id => "ratings_form", :method => :get do
   Include:
   - @all_ratings.keys.each do |rating|
@@ -9,7 +9,7 @@
     = check_box_tag "ratings[#{rating}]", 1, @checked[rating], :id => "ratings_#{rating}"
   = submit_tag 'Refresh', :id => "ratings_submit"
   = submit_tag 'Reset', :id => "reset_submit"
-# end copyed code
+
 
 %table#movies
   %thead

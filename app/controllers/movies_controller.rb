@@ -11,6 +11,7 @@ class MoviesController < ApplicationController
   end
 
   def index
+    #part 2
     #@all_ratings needs to be defined because of the copied code in Step 2
     @all_ratings = Movie.all_ratings # created a new method located in (app/models/movie.rb)
     
@@ -28,7 +29,7 @@ class MoviesController < ApplicationController
     session[:ratings] = (params[:ratings].nil?) ? (session[:ratings].nil?) ? @all_ratings : session[:ratings] : params[:ratings]
     
     session[:sort] = params[:sort] unless params[:sort].nil?
-    
+    #part 2 
     #Reset button action
     if params[:commit] == "Reset"
       session.clear 
